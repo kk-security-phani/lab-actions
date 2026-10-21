@@ -1,0 +1,12 @@
+name: 'Setup Environment'
+description: 'A simple composite action'
+inputs:
+  environment:
+    required: true
+runs:
+  using: "composite"
+  steps:
+    - run: echo "Setting up ${{ inputs.environment }}"
+      shell: bash
+    - run: echo "Running linter..."
+      shell: bash
